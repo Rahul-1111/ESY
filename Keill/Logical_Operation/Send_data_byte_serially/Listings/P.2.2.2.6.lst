@@ -1,0 +1,37 @@
+C51 COMPILER V9.60.7.0   P_2_2_2_6                                                         09/18/2023 11:52:15 PAGE 1   
+
+
+C51 COMPILER V9.60.7.0, COMPILATION OF MODULE P_2_2_2_6
+OBJECT MODULE PLACED IN .\Objects\P.2.2.2.6.obj
+COMPILER INVOKED BY: C:\Keil_v5\C51\BIN\C51.EXE P.2.2.2.6.c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEXTEND PRINT(.\Listings
+                    -\P.2.2.2.6.lst) TABS(2) OBJECT(.\Objects\P.2.2.2.6.obj)
+
+line level    source
+
+   1          #include<regx51.h>
+   2          sbit t_bit = P2^0;          // Define t_bit as the first bit of Port 2.
+   3          sbit reg_bitdata = ACC^0;     // Define reg_bitdata as the least significant bit of ACC (accumulator).
+   4          void main(void)
+   5          {
+   6   1      unsigned char a = 0xAA,i;    // Initialize 'a' and declare 'i'.
+   7   1      ACC = a;                     // Load 'a' into the accumulator.
+   8   1      for(i=1;i<=8;i++)            // Loop 8 times.
+   9   1      {
+  10   2      t_bit = reg_bitdata;         // Set t_bit based on reg_bitdata.
+  11   2      ACC = ACC << 1;              // Shift ACC left by 1 bit.
+  12   2      }
+  13   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =     15    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

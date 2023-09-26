@@ -1,0 +1,95 @@
+BL51 BANKED LINKER/LOCATER V6.22.4.0                                                    09/26/2023  14:32:26  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22.4.0, INVOKED BY:
+C:\KEIL_V5\C51\BIN\BL51.EXE .\Objects\toggle.obj TO .\Objects\Toggle PRINT (.\Listings\Toggle.m51)
+
+
+MEMORY MODEL: SMALL
+
+
+INPUT MODULES INCLUDED:
+  .\Objects\toggle.obj (TOGGLE)
+  C:\KEIL_V5\C51\LIB\C51S.LIB (?C_STARTUP)
+
+
+LINK MAP OF MODULE:  .\Objects\Toggle (TOGGLE)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+            IDATA   0008H     0001H     UNIT         ?STACK
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0003H     ABSOLUTE     
+                    0003H     07FDH                  *** GAP ***
+            CODE    0800H     0020H     UNIT         ?PR?_ADD_DELAY?TOGGLE
+            CODE    0820H     000FH     UNIT         ?PR?MAIN?TOGGLE
+            CODE    082FH     000CH     UNIT         ?C_C51STARTUP
+
+
+
+OVERLAY MAP OF MODULE:   .\Objects\Toggle (TOGGLE)
+
+
+SEGMENT
+  +--> CALLED SEGMENT
+---------------------
+?C_C51STARTUP
+  +--> ?PR?MAIN?TOGGLE
+
+?PR?MAIN?TOGGLE
+  +--> ?PR?_ADD_DELAY?TOGGLE
+
+
+
+SYMBOL TABLE OF MODULE:  .\Objects\Toggle (TOGGLE)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        TOGGLE
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:0080H         PUBLIC        P0
+  C:0800H         PUBLIC        _add_delay
+  C:0820H         PUBLIC        main
+  -------         PROC          MAIN
+  C:0820H         LINE#         5
+  C:0820H         LINE#         6
+BL51 BANKED LINKER/LOCATER V6.22.4.0                                                  09/26/2023  14:32:26  PAGE 2
+
+
+  C:0820H         LINE#         7
+  C:0823H         LINE#         9
+  C:0823H         LINE#         10
+  C:0823H         LINE#         11
+  C:0826H         LINE#         13
+  C:082DH         LINE#         14
+  -------         ENDPROC       MAIN
+  -------         PROC          _ADD_DELAY
+  D:0006H         SYMBOL        delay_time
+  -------         DO            
+  D:0004H         SYMBOL        x
+  D:0002H         SYMBOL        y
+  -------         ENDDO         
+  C:0800H         LINE#         17
+  C:0800H         LINE#         18
+  C:0800H         LINE#         20
+  C:080AH         LINE#         21
+  C:080AH         LINE#         22
+  C:080DH         LINE#         23
+  C:080DH         LINE#         25
+  C:0818H         LINE#         26
+  C:081FH         LINE#         27
+  -------         ENDPROC       _ADD_DELAY
+  -------         ENDMOD        TOGGLE
+
+******************************************************************************
+* RESTRICTED VERSION WITH 0800H BYTE CODE SIZE LIMIT; USED: 002FH BYTE ( 2%) *
+******************************************************************************
+
+Program Size: data=9.0 xdata=0 code=62
+LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)

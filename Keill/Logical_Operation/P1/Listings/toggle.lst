@@ -1,0 +1,52 @@
+C51 COMPILER V9.60.7.0   TOGGLE                                                            09/26/2023 14:32:26 PAGE 1   
+
+
+C51 COMPILER V9.60.7.0, COMPILATION OF MODULE TOGGLE
+OBJECT MODULE PLACED IN .\Objects\toggle.obj
+COMPILER INVOKED BY: C:\Keil_v5\C51\BIN\C51.EXE toggle.c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEXTEND PRINT(.\Listings\to
+                    -ggle.lst) TABS(2) OBJECT(.\Objects\toggle.obj)
+
+line level    source
+
+   1          #include <regx51.h>             // Include the header file for 8051 microcontroller (assuming it's for an 
+             -8051)
+   2          
+   3          void add_delay(unsigned int);   // Function prototype for delay function
+   4          
+   5          void main(void)
+   6          {
+   7   1          P0 = 0xAA;                  // Initialize Port 0 with the binary value 10101010b
+   8   1      
+   9   1          while (1)                   // Infinite loop
+  10   1          {
+  11   2              P0 = ~P0;               // Toggle all bits of Port 0 (complement the bits)
+  12   2      
+  13   2              add_delay(250);         // Call the delay function with a delay time of 250
+  14   2          }
+  15   1      }
+  16          
+  17          void add_delay(unsigned int delay_time)
+  18          {
+  19   1          unsigned int x, y;
+  20   1          for (x = 0; x < delay_time; x++)    //  there are two nested for loops:
+  21   1          {
+  22   2              for (y = 0; y < 1275; y++)
+  23   2              {
+  24   3                                      // This inner loop creates a delay, but it's not very precise.
+  25   3              }
+  26   2          }
+  27   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =     47    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

@@ -1,0 +1,54 @@
+C51 COMPILER V9.60.7.0   2_2_3_1                                                           09/18/2023 13:49:53 PAGE 1   
+
+
+C51 COMPILER V9.60.7.0, COMPILATION OF MODULE 2_2_3_1
+OBJECT MODULE PLACED IN .\Objects\2.2.3.1.obj
+COMPILER INVOKED BY: C:\Keil_v5\C51\BIN\C51.EXE 2.2.3.1.c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEXTEND PRINT(.\Listings\2
+                    -.2.3.1.lst) TABS(2) OBJECT(.\Objects\2.2.3.1.obj)
+
+line level    source
+
+   1          #include <regx51.h>
+   2          
+   3          void my_delay(unsigned int);
+   4          
+   5          void main(void)
+   6          {
+   7   1          unsigned int i; // Declare 'i' to use it in the for loop
+   8   1          P1 = 0x00; // Initialize P1 with 0x00
+   9   1          
+  10   1          for (i = 0; i <= 255; i++)
+  11   1          {
+  12   2              P1++; // Increment the value of P1
+  13   2              my_delay(200);
+  14   2          }
+  15   1      }
+  16          
+  17          void my_delay(unsigned int my_time)
+  18          {
+  19   1          unsigned int j, k;
+  20   1          
+  21   1          for (j = 0; j < my_time; j++)
+  22   1          {
+  23   2              for (k = 0; k < 1275; k++)
+  24   2             { 
+  25   3                   // This nested loop is used to create a time delay.
+  26   3                  // The exact duration of the delay depends on the value 1275 and the system clock frequency.
+  27   3                  // Adjust the values within these loops to achieve the desired delay duration.
+  28   3          }
+  29   2          }
+  30   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =     66    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----       2
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

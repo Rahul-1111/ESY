@@ -1,0 +1,83 @@
+BL51 BANKED LINKER/LOCATER V6.22.4.0                                                    09/18/2023  11:52:15  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22.4.0, INVOKED BY:
+C:\KEIL_V5\C51\BIN\BL51.EXE .\Objects\P.2.2.2.6.obj TO .\Objects\P.2.2.2.6 PRINT (.\Listings\P.2.2.2.m51)
+
+
+MEMORY MODEL: SMALL
+
+
+INPUT MODULES INCLUDED:
+  .\Objects\P.2.2.2.6.obj (P_2_2_2_6)
+  C:\KEIL_V5\C51\LIB\C51S.LIB (?C_STARTUP)
+
+
+LINK MAP OF MODULE:  .\Objects\P.2.2.2.6 (P_2_2_2_6)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+            IDATA   0008H     0001H     UNIT         ?STACK
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0003H     ABSOLUTE     
+                    0003H     07FDH                  *** GAP ***
+            CODE    0800H     000FH     UNIT         ?PR?MAIN?P_2_2_2_6
+            CODE    080FH     000CH     UNIT         ?C_C51STARTUP
+
+
+
+OVERLAY MAP OF MODULE:   .\Objects\P.2.2.2.6 (P_2_2_2_6)
+
+
+SEGMENT
+  +--> CALLED SEGMENT
+---------------------
+?C_C51STARTUP
+  +--> ?PR?MAIN?P_2_2_2_6
+
+
+
+SYMBOL TABLE OF MODULE:  .\Objects\P.2.2.2.6 (P_2_2_2_6)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        P_2_2_2_6
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:00A0H         PUBLIC        P2
+  B:00A0H.0       PUBLIC        t_bit
+  C:0800H         PUBLIC        main
+  D:00E0H         PUBLIC        ACC
+  B:00E0H.0       PUBLIC        reg_bitdata
+  -------         PROC          MAIN
+  -------         DO            
+  D:0007H         SYMBOL        a
+  D:0007H         SYMBOL        i
+  -------         ENDDO         
+BL51 BANKED LINKER/LOCATER V6.22.4.0                                                  09/18/2023  11:52:15  PAGE 2
+
+
+  C:0800H         LINE#         4
+  C:0800H         LINE#         5
+  C:0800H         LINE#         6
+  C:0800H         LINE#         7
+  C:0802H         LINE#         8
+  C:0804H         LINE#         9
+  C:0804H         LINE#         10
+  C:0808H         LINE#         11
+  C:080AH         LINE#         12
+  C:080EH         LINE#         13
+  -------         ENDPROC       MAIN
+  -------         ENDMOD        P_2_2_2_6
+
+******************************************************************************
+* RESTRICTED VERSION WITH 0800H BYTE CODE SIZE LIMIT; USED: 000FH BYTE ( 0%) *
+******************************************************************************
+
+Program Size: data=9.0 xdata=0 code=30
+LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)

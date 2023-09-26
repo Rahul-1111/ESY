@@ -1,0 +1,42 @@
+C51 COMPILER V9.60.7.0   2_2_4_1                                                           09/18/2023 14:46:05 PAGE 1   
+
+
+C51 COMPILER V9.60.7.0, COMPILATION OF MODULE 2_2_4_1
+OBJECT MODULE PLACED IN .\Objects\2.2.4.1.obj
+COMPILER INVOKED BY: C:\Keil_v5\C51\BIN\C51.EXE 2.2.4.1.c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEXTEND PRINT(.\Listings\2
+                    -.2.4.1.lst) TABS(2) OBJECT(.\Objects\2.2.4.1.obj)
+
+line level    source
+
+   1          #include <regx51.h>
+   2          void add_delay(unsigned int); // Declare the add_delay function.
+   3          sbit data_bit=P1^2;          // Define a bit variable data_bit on Port 1, bit 2.
+   4          void main(void)
+   5          {
+   6   1      while(1)                     // Infinite loop.
+   7   1      {
+   8   2      data_bit=1;                   // Set data_bit to 1 (high)
+   9   2      add_delay(50);             // Call the add_delay function with a delay of 50.
+  10   2      data_bit=0;                  // Set data_bit to 0 (low).
+  11   2      }
+  12   1      }
+  13          void add_delay(unsigned int delay_time)
+  14          {
+  15   1      unsigned int x,y;
+  16   1      for(x=0;x<delay_time;x++)    // Outer loop for delay_time iterations.
+  17   1      for(y=0;y<1275;y++);         // Inner loop for creating a delay.
+  18   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =     45    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)
