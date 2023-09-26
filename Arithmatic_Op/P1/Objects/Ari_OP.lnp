@@ -1,3 +1,0 @@
-".\Objects\ARI_OP.obj" 
-TO ".\Objects\Ari_OP" 
-PRINT(".\Listings\Ari_OP.m51")
